@@ -1,0 +1,16 @@
+domain: asset.ibm
+layout:
+- go.kubebuilder.io/v3
+projectName: operator-trigger
+repo: github.com/vincent-pli/operator-trigger
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: asset.ibm
+  group: ibm.dev
+  kind: ResourceWatcher
+  path: github.com/vincent-pli/operator-trigger/api/v1alpha1
+  version: v1alpha1
+version: "3"

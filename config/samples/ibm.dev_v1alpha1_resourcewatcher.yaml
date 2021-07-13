@@ -1,0 +1,7 @@
+apiVersion: ibm.dev.asset.ibm/v1alpha1
+kind: ResourceWatcher
+metadata:
+  name: resourcewatcher-sample
+spec:
+  # Add fields here
+  foo: bar

@@ -1,0 +1,24 @@
+# permissions for end users to edit resourcewatchers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: resourcewatcher-editor-role
+rules:
+- apiGroups:
+  - ibm.dev.asset.ibm
+  resources:
+  - resourcewatchers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ibm.dev.asset.ibm
+  resources:
+  - resourcewatchers/status
+  verbs:
+  - get
