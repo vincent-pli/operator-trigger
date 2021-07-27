@@ -28,7 +28,7 @@ import (
 type ResourceWatcherSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
-
+	Handler    string   `json:"handler"`
 	Namespaces []string `json:"namespaces"`
 	// Resources is the list of resources to watch
 	Resources []ApiServerResource `json:"resources"`
