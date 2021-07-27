@@ -19,21 +19,21 @@ package resources
 import (
 	"fmt"
 
-	sourcesv1alpha1 "github.com/vincent-pli/resource-watcher/pkg/apis/tekton/v1alpha1"
-
+	ibmdevv1alpha1 "github.com/vincent-pli/operator-trigger/api/v1alpha1"
+	kedav1alpha1 "github.com/kedacore/keda/v2/api/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"
 )
 
-func MakeScaledObject(source *sourcesv1alpha1.ResourceWatcher) *corev1.Service {
+func MakeScaledObject(source *ibmdevv1alpha1.ResourceWatcher) *corev1.Service {
 	// labels := map[string]string{
 	// 	"eventing-source":      "resource-watcher",
 	// 	"eventing-source-name": source.Name,
 	// }
 
 	// return kedav1alpha1.ScaledObject{}
-	return &kedav1alpha1{
+	return &kedav1alpha1.{
 		ObjectMeta: metav1.ObjectMeta{
 			GenerateName: fmt.Sprintf("%s-service", source.Name),
 			Namespace:    source.Namespace,

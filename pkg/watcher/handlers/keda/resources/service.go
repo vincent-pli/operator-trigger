@@ -19,13 +19,13 @@ package resources
 import (
 	"fmt"
 
-	sourcesv1alpha1 "github.com/vincent-pli/resource-watcher/pkg/apis/tekton/v1alpha1"
+	ibmdevv1alpha1 "github.com/vincent-pli/operator-trigger/api/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"
 )
 
-func MakeScalerService(source *sourcesv1alpha1.ResourceWatcher) *corev1.Service {
+func MakeScalerService(source *ibmdevv1alpha1.ResourceWatcher) *corev1.Service {
 	labels := map[string]string{
 		"app": "resource-watcher",
 	}
